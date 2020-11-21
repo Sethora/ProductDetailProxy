@@ -42,23 +42,23 @@
 
 module.exports = {
   service1: {
-    api: '/',
+    api: '/**',
+    url: 'http://127.0.0.1:3002',
+    bundle: 'bundle.js',
+  },
+  service2: {
+    api: '/**',
     url: 'http://127.0.0.1:3001',
     bundle: 'bundle.js',
   },
-  // service2: {
-  //   api: '/product/get',
-  //   url: 'http://127.0.0.1:3002',
-  //   bundle: 'app.js',
-  // },
-  // service3: {
-  //   api: 'FIX_ME',
-  //   url: 'http://localhost:3003',
-  //   bundle: 'app.js',
-  // },
-  // service4: {
-  //   api: 'FIX_ME',
-  //   url: 'http://localhost:3004',
-  //   bundle: 'app.js',
-  // },
+  service3: {
+    api: '/**',
+    url: 'http://127.0.0.1:2754',
+    bundle: 'bundle.js',
+  },
+  service4: {
+    api: '/**',
+    url: 'http://127.0.0.1:4444',
+    bundle: 'main.js',
+  },
 };

@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const bodyParser = require('body-parser');
 const path = require('path');
 const router = require('./router');
 
@@ -7,6 +8,8 @@ const PUBLIC_DIR = path.resolve(__dirname, '..', 'public');
 const app = express();
 
 app.use(morgan('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(PUBLIC_DIR));
 
 // Handling asset requests for webpack bundles by passing off requests to the bundles router
