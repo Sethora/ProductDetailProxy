@@ -12,9 +12,15 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(PUBLIC_DIR));
 
+
+
 // Handling asset requests for webpack bundles by passing off requests to the bundles router
 app.use('/bundles', router.bundles);
 // Handling AJAX requests to the API by passing off requests to the api router
 app.use('/api', router.api);
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../public/index.html'));
+});
 
 module.exports = app;

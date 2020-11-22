@@ -42,22 +42,22 @@
 
 module.exports = {
   service1: {
-    api: '/**',
+    api: '/product/get',
     url: 'http://127.0.0.1:3002',
     bundle: 'bundle.js',
   },
   service2: {
-    api: '/**',
-    url: 'http://127.0.0.1:3001',
+    api: '/products/:id/*',
+    url: 'http://localhost:3001',
     bundle: 'bundle.js',
   },
   service3: {
-    api: '/**',
+    api: ['/images', '/members'],
     url: 'http://127.0.0.1:2754',
     bundle: 'bundle.js',
   },
   service4: {
-    api: '/**',
+    api: '/products/similar',
     url: 'http://127.0.0.1:4444',
     bundle: 'main.js',
   },
