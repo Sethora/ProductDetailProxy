@@ -42,23 +42,23 @@
 
 module.exports = {
   service1: {
-    api: '/product/get',
-    url: 'http://54.234.84.102:3001',
+    api: ['/product'],
+    url: 'http://54.234.84.102:3100',
     bundle: 'bundle.js',
   },
   service2: {
-    api: '/products/:id/*',
-    url: 'http://localhost:3001',
+    api: '/products/:id/reviews/*',
+    url: 'http://18.224.62.145:3001',
     bundle: 'bundle.js',
   },
   service3: {
-    api: ['/images', '/members'],
-    url: 'http://127.0.0.1:2754',
+    api: ['/etp/images', '/etp/member/?memberId=*', '/etp/products/?products=*'],
+    url: 'http://3.15.186.151:2754/',
     bundle: 'bundle.js',
   },
   service4: {
-    api: '/products/similar',
-    url: 'http://127.0.0.1:4444',
+    api: ['/products/:id/similar', '/products/:id/youmayalsolike'],
+    url: 'http://13.57.250.145:4444/',
     bundle: 'main.js',
   },
 };
